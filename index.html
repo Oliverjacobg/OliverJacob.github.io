@@ -1,0 +1,930 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Personal Portfolio">
+	<meta name="author" content="OLIVER JACOB">
+   
+
+	<title>Oliver Jacob – Responsive Personal Portfolio</title>
+    <!-- Mouse icon -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Web Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- Font Awesome CSS -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<!-- Animate css -->
+  <link href="assets/css/animate.css" rel="stylesheet">
+  <!-- Magnific css -->
+	<link href="assets/css/magnific-popup.css" rel="stylesheet">
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+  <!-- Responsive CSS -->
+  <link href="assets/css/responsive.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="#">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="#">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="#">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="#">
+  <link rel="apple-touch-icon-precomposed" href="#">
+
+<style type="text/css">
+#home {
+  
+    -webkit-background-attachment: fixed;
+    background-attachment: fixed;
+    background-color: #222;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+}
+ 
+ .topper{
+width:auto;
+/*height:1000px;*/
+ }
+
+.fullscreen-bg {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    
+    width: 100%;
+    }
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*mouse icon*/
+.circle
+{
+	position:absolute;
+	top:81%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	border: 2px solid #fff;
+	border-radius:50%;
+	width:50px;
+	height:50px;
+	text-align:center;
+	line-height:110px;
+	font-size:40px;
+	overflow:hidden;
+}
+.circle .fa
+{
+	color:#fff;
+	margin: 0;
+	padding: 0;
+	animation: scrolldown 1s linear infinite;
+}
+@keyframes scrolldown 
+{
+	0%
+	{
+		transform: translateY(-50px);
+		text-shadow: 0 25px 0 #fff;
+	}
+	20%
+	{
+		transform: translateY(-25px);
+		text-shadow: 0 5px 0 #fff;
+	}
+	40%
+	{
+		transform: translateY(-25px);
+		text-shadow: 0 -5px 0 #fff;
+	}
+	60%
+	{
+		transform: translateY(-25px);
+		text-shadow: 0 0px 0 #fff;
+	}
+	100%
+	{
+		transform: translateY(25px);
+		text-shadow: 0 -25px 0 #fff;
+	}
+}
+.circle:before
+{
+	content:'SCROLL DOWN';
+	position:absolute;
+	color:#fff;
+	font-size:5px;
+	left:5px;
+	top:-40px;
+}
+
+
+/*Menu bar*/
+.outer
+{
+width: 150px;
+height: 50px;
+/*overflow-x:hidden;*/
+overflow:hidden;
+position: relative;
+float: left;
+margin-right: 10px;
+border-radius:50px;
+margin-bottom:5px;
+}
+
+
+
+		.inner{
+			width: 250px;
+			height: 50px;
+			font:bold 16px/50px "arial";
+			position: absolute; right: 0;
+			padding-right:45px;
+			color:white;
+			text-align: right;
+			text-decoration: none;
+			white-space: pre;
+			transition: width .7s, color .7s;}
+
+		.inner:before{
+			content:"";
+			position: absolute;
+			width: 139px;
+			height: 39px;
+			right: 5px;
+			top: 5px;
+			border-radius:50px;
+			border:1px dashed #333;
+		}
+		.color1{background:linear-gradient(60deg, deepskyblue 150px,gray 180px, #333);}
+		.color2{background:linear-gradient(60deg, #68c3a3 150px,gray 180px, #333);}
+		.color3{background:linear-gradient(60deg, orange 150px,gray 180px, #333);}
+		.color4{background:linear-gradient(60deg, pink 150px,gray 180px, #333);}
+			
+		.inner:hover{
+		width: 150px;
+		color: black;}
+
+		.menulist
+		{
+			padding:5px;
+		}	
+			
+</style>
+
+</head>
+
+<body>
+	<!-- Preloader -->
+	<!--<div id="tt-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
+	</div>-->
+
+	<!-- Home Section -->
+	<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+<div class="topper">
+<video playsinline autoplay muted loop poster="assets/images/blue-motion.png" class="fullscreen-bg">
+
+<source src="assets/images/oliver-background.mp4" type="video/mp4"></vedio>
+
+</div>
+
+<div class="home_page">
+  <div class="slider">
+    <figure>
+      <div class="slide">
+        <img src="assets/images/test2.jpg">
+      </div>
+    </figure>
+  </div>
+  <div class="slider1">
+    <figure>
+      <div class="slide">
+        <img src="assets/images/test.jpg">
+      </div>
+    </figure>
+  </div>
+  <div class="slider2">
+    <figure>
+      <div class="slide">
+        <img src="assets/images/test3.jpg">
+      </div>
+    </figure>
+  </div>
+  <div class="slider3">
+    <figure>
+      <div class="slide">
+        <img src="assets/images/test.jpg">
+      </div>
+    </figure>
+  </div>
+</div>
+
+<div class="container">
+
+		<div class="intro">
+    
+			<div class="intro-sub">I 'm Oliver Jacob</div>
+			<h1>Digital Builder</h1>
+			<p>I am a professional creative User Interface Designer &amp; Developer<br> Involving with latest web designing and technologies.</p>
+
+      <div class="social-icons">
+        <ul class="list-inline">
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+       </ul>
+      </div> <!-- /.social-icons -->
+		</div>
+	<!--<div class="mouse-icon">
+			<div class="wheel"></div>
+		</div>-->
+     <a href="#about"><div class="circle">
+<i class="fa fa-angle-down" aria-hidden="true"></i>
+</div></a>
+ 
+</div><!---Container -->   
+
+	</section><!-- End Home Section -->
+
+
+
+
+	<!-- Navigation -->
+	<header class="header">
+		<nav class="navbar navbar-custom" role="navigation">
+			<div class="container menulist">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!--<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>-->
+                    <div class="logo">
+                    <a class="navbar-brand" href="index.html"><img src="assets/images/Oliver-logo.png" alt="Logo"></a>
+                    </div>
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<!--<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#works">Works</a></li>
+						<li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                     </ul> -->
+                     
+                     <ul class="navbar-right">
+                    <!-- <li class="outer">
+                     <a class="navbar-brand" href="index.html"><img src="assets/images/Oliver-logo.png" alt=""></a>
+                     </li>-->
+                     <li class="outer"> 
+		<a href="#home" class="inner color1">Home</a>
+	</li>
+	<li class="outer"> 
+	  <a href="#about" class="inner color2">About</a>
+	</li>
+	<li class="outer"> 
+    <a href="#skills" class="inner color1">Skills</a>
+	</li>
+	<li class="outer"> 
+    <a href="#resume" class="inner color2">Resume</a>
+	</li>
+    <li class="outer"> 
+	  <a href="#works" class="inner color1">Works</a>
+	</li>
+    <li class="outer"> 
+  <a href="#contact" class="inner color2">Contact</a>
+	</li>
+			</ul>	</div>
+                               
+			</div><!-- .container -->
+		</nav>
+	</header><!-- End Navigation -->
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">About Me</h2>
+
+        <div class="row">
+
+          <div class="col-md-4 col-md-push-8">
+            <div class="biography">
+              <div class="myphoto">
+                <img src="#" alt="Logo">
+              </div>
+              <ul>
+                <li><strong>Name:</strong> OLIVER JACOB</li>
+                <li><strong>Date of birth:</strong> 09 Jun 1993</li>
+                <!--<li><strong>Address:</strong> 239/2 Awesome Street, USA</li>-->
+                <li><strong>Languages:</strong> English &amp; Tamil</li>
+                <li><strong>Nationality:</strong> Indian</li>
+                <li><strong>Email:</strong> oliverjacobgoj@gmail.com</li>
+               
+              </ul>
+            </div>
+          </div> <!-- col-md-4 -->
+
+          <div class="col-md-8 col-md-pull-4">
+            <div class="short-info wow fadeInUp">
+              <h3>Objective</h3>
+              <p align="justify">An opportunity to work and upgrade oneself, as well as being involved in an organization that believes in gaining a competitive edge and giving back to the community. I'm presently expanding my solid experience in Digital Builder. I focus on using my interpersonal skills to build good user experience and create a strong interest in my employers. I hope to develop skills in design, coding and my knowledge of the Web, and become an honest asset to the company. As a personal, I'm self-confident you’ll find me creative, funny and naturally passionate. I’m a forward thinker, which others may find inspiring when working as a team.</p>
+            </div>
+
+            <div class="short-info wow fadeInUp">
+              <h3>What I Do ?</h3>
+              <p align="justify">I have been working as a Digital Builder since. I have a love of clean, elegant styling, and I have lots of experience in the production of CSS and HTML for modern websites. I loving creating awesome as per my client's need. I think user experience when I try to craft something for my clients. Making a design awesome.</p>
+
+              <ul class="list-check">
+                <li>User Experience Design</li>
+                <li>Interface Design</li>
+                <li>Product Design</li>
+                <li>Branding Design</li>
+              </ul>
+            </div>
+
+        <!--    <div class="my-signature">
+              <img src="#" alt="">
+            </div>
+-->
+            <div class="download-button">
+              <a class="bubbly-button btn btn-info btn-lg" href="#contact"><i class="fa fa-paper-plane"></i>Send me message</a>
+             <!-- <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-download"></i>download my cv</a>-->
+              <a class="btn btn-info btn-lg bubbly-button" href="assets/OLIVER-JACOB.pdf"><i class="fa fa-download"></i>View my resume</a>
+            </div>
+          </div>
+
+
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </section><!-- End About Section -->
+
+
+    <!-- Video Section -->
+   <section id="skills" class="skills-section">
+   <div class="snow"> </div>
+    <div class="section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Skills</h2>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="skill-progress">
+              <div class="skill-title"><h3>HTML &amp; CSS</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Photoshop</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" ><span>60%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Bootstrap</h3></div>  
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" ><span>50%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+          </div><!-- /.col-md-6 -->
+
+          <div class="col-md-6">
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Javascript</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" ><span>60%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Dreamviewer</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" ><span>60%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Flash</h3></div>  
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" ><span>40%</span>
+                </div>
+              </div><!-- /.progress -->
+            </div><!-- /.skill-progress -->
+          </div><!-- /.col-md-6 -->
+        </div><!-- /.row -->
+
+        <div class="skill-chart text-center">
+          <h3>More skills</h3>
+        </div>
+          
+        <div class="row more-skill text-center">
+          <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="80" data-color="e74c3c">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>leadership</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="40" data-color="2ecc71">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Creativity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="70" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Management</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="75" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Branding</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="60" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Marketing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="70" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Motivation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div><!-- /.container -->
+      </div><!-- /.sectin padding -->
+    <!--/.snow -->
+
+    </section><!-- End Skills Section -->
+
+    <!-- /.Video Section -->
+
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+    <div class="resume-section-bg">
+        <div class="container">
+            <h2 class="section-title wow fadeInUp">Resume</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li>
+                                <div class="posted-date">
+                                    <span class="month">2011-2014</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Bachelor degree certificate</h3>
+                                            <span>B.Tech(IT) in JP College of Engineering, Ayikudi, Tamil Nadu, India.</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>I have completed Information Technology degree from JP College of Engineering, India at feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                    <span class="month">2009-2010</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Higher Secondary certificate</h3>
+                                            <span>Government Boys Hr Secondary School, Tenkasi, Tamil Nadu, India.</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>From this school of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="posted-date">
+                                  <span class="month">2007-2008</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Secondary school certificate</h3>
+                                            <span>Lakshmi Hari Hara High School, Elathur, Tamil Nadu, India.</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>I was awesome at school, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                  <span class="month">2014-2016</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Web Designer</h3>
+                                            <span>Freelancer, Elathur, Shengottah, Tamil Nadu, India.</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="posted-date">
+                                  <span class="month">2016-2018</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>Digital Builder</h3>
+                                            <span>Concentrix Technologies, Chennai, Tamil Nadu, India.</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>I feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+        </div><!-- /.container -->
+        </div>
+    </section><!-- End Resume Section -->
+
+
+    <!-- Skills Section -->
+    
+
+    <!-- Works Section -->
+    <section id="works" class="works-section section-padding" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Works</h2>
+
+        <ul class="list-inline" id="filter">
+            <li><a class="active" data-group="all">All</a></li>
+            <li><a data-group="design">Design</a></li>
+            <li><a data-group="web">Web</a></li>
+            <li><a data-group="interface">Interface</a></li>
+            <li><a data-group="identety">Identity</a></li>
+        </ul>
+
+        <div class="row">
+          <div id="grid">
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "interface"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-1.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-1.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+
+
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-2.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-2.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "interface"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-9.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-9.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "design"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-10.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-10.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "design"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-5.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-5.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "design"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-6.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-6.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-7.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-7.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-8.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="#"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="assets/images/works/portfolio-8.jpg" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>Portfolio Title</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /#grid -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- End Works Section -->
+
+
+    <!-- Facts Section -->
+   
+
+    <!-- Blog Section -->
+    
+
+
+    <!-- Hire Section -->
+    <!--<section class="hire-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+      <div class="hire-section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>I'm available for freelance project</h2>
+              <a href="#" class="btn btn-default">Get Hired</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>--><!-- End Hire Section -->
+
+
+
+    <!-- Contact Section -->
+   
+
+      <section id="contact" class="contact-section">
+    <div id="particles-js"></div>
+   <div class="container">
+   <h2 class="section-title wow fadeInUp">contact</h2>
+   <div class="litext"><h1><a href="#">in</a></h1>
+    <video autoplay loop id="video-background" muted plays-inline>
+  <source src="assets/images/4K UHD Free Video Background   Oscilating Particle Circle.mp4" type="video/mp4">
+</video> </div> </div>
+    <!--<section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Get in touch</h2>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-form">
+              <strong>Send me a message</strong>
+              <form name="contact-form" method="post" action="assets/php/sendemail.php">
+                <div class="form-group">
+                  <label for="InputName1">Name</label>
+                  <input type="text" name="name" class="form-control" id="InputName1" required>
+                </div>
+                <div class="form-group">
+                  <label for="InputEmail1">Email</label>
+                  <input type="email" name="email" class="form-control" id="InputEmail1" required>
+                </div>
+                <div class="form-group">
+                  <label for="InputSubject">Subject</label>
+                  <input type="text" name="subject" class="form-control" id="InputSubject">
+                </div>
+                <div class="form-group">
+                  <label for="InputTextarea">Message</label>
+                  <textarea name="message" class="form-control" id="InputTextarea" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="row center-xs">
+              <div class="col-sm-6">
+                <i class="fa fa-map-marker"></i>
+                <address>
+                  <strong>Address/Street</strong>
+                 3/754, Kolavizhi Ammon 4th St,<br>
+                  Palavakkam, Chennai-600041<br>
+                </address>
+              </div>
+
+              <div class="col-sm-6">
+                <i class="fa fa-mobile"></i>
+                <div class="contact-number">
+                  <strong>Phone Number</strong>
+                  (+91) 9489825986
+                </div>
+              </div>
+            </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="location-map">
+                <div id="mapCanvas" class="map-canvas"></div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>-->
+    </section><!-- End Contact Section -->
+
+
+	<!-- Footer Section -->
+    <footer class="footer-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright text-center">
+              <p>&copy; OLIVER JACOB 2018. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer><!-- End Footer Section -->
+
+
+	<!-- Scroll-up -->
+	<div class="scroll-up">
+		<a href="#home"><i class="fa fa-angle-up"></i></a>
+	</div>
+
+	<!-- Javascript files -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/jquery.sticky.js"></script>
+  <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.countTo.js"></script>
+  <script src="assets/js/jquery.inview.min.js"></script> 
+  <script src="assets/js/jquery.easypiechart.js"></script>
+  <script src="assets/js/jquery.shuffle.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+  <script src="assets/js/jquery.fitvids.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script src="assets/js/scripts.js"></script>
+
+<!-- scripts for contact us page -->
+<script src="assets/js/particles.js"
+<script src="assets/js/particles.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+<!-- scripts for animation button -->
+<script src="assets/js/buttionanimation.js"></script>
+</body>
+</html>
